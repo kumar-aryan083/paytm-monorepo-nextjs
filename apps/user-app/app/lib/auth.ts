@@ -37,13 +37,16 @@ export const authOptions = {
             data: {
               number: credentials.phone,
               password: hashedPassword,
+              Balance: {
+                create: { amount: 0, locked: 0 },
+              },
             },
           });
           return {
             id: user.id,
             name: user.fullName,
             number: user.number,
-          };
+          } as any;
         } catch (e) {
           console.error(e);
         }
@@ -58,7 +61,4 @@ export const authOptions = {
       return session;
     },
   },
-  //   pages: {
-  //     signIn: "/signin",
-  //   },
 };

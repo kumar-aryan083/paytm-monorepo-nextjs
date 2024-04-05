@@ -4,6 +4,9 @@
   "private": true,
   "exports": {
     "./Appbar": "./src/Appbar.tsx",
+    "./center": "./src/center.tsx",
+    "./textInput": "./src/textInput.tsx",
+    "./select": "./src/select.tsx",
     "./button": "./src/button.tsx",
     "./card": "./src/card.tsx",
     "./code": "./src/code.tsx"
