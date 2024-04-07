@@ -38,6 +38,10 @@ export default async function () {
     const balance = await getBalance();
     const transactions = await getOnRampTransactions();
 
+    const session = getServerSession(authOptions);
+    if (!session) {
+        return <div>Invalid Entry</div>
+    }
     return <div className="w-screen">
         <div className="text-4xl text-[#6a51a6] pt-8 mb-8 font-bold">
             Transfer
