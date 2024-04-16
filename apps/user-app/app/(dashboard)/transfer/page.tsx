@@ -1,3 +1,5 @@
+
+
 import prisma from "@repo/db/client";
 import { AddMoney } from "../../../components/AddMoneyCard";
 import { BalanceCard } from "../../../components/BalanceCard";
@@ -17,8 +19,6 @@ async function getBalance() {
         locked: balance?.locked || 0
     }
 }
-
-
 
 async function getOnRampTransactions() {
     const session = await getServerSession(authOptions);
